@@ -1,36 +1,32 @@
 [
   {
-    "key": "Home",
+    "key": "Inicio",
     "url": "/",
     "children": []
   },
   {
-    "key": "About Us",
+    "key": "Recuerdos",
     "url": "/about/",
     "children": []
   },
   {
-    "key": "Projects",
+    "key": "Galería",
     "url": "/projects/",
-    "children": [
-      {
-        "key": "Project 1",
-        "url": "/projects/project-1/"
-      },
-      {
-        "key": "Project 2",
-        "url": "/projects/project-2/"
-      }
-    ]
+    "children": []
   },
   {
-    "key": "Reviews",
+    "key": "Cartas",
     "url": "/reviews/",
     "children": []
   },
   {
-    "key": "Blog",
+    "key": "Momentos",
     "url": "/blog/",
-    "children": []     
+    "children": []
+  },
+  {
+    "key": "Para ti",
+    "url": "/contact/",
+    "children": []
   }
 ]
