@@ -1,11 +1,5 @@
 ---
-/**
- * * The hero component used on the homepage
- * * Takes an image as a prop
- */
-
 // Utils
-import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 import type { GetImageResult } from "astro";
 
@@ -23,15 +17,12 @@ const { image } = Astro.props as Props;
 			<h1 class="cs-title">Feliz Cumpleaños <br /> Morelia</h1>
 			<p class="cs-text">Hoy quiero reunir aquí recuerdos, fotos y palabras bonitas para ti.</p>
 			<a href="/about/" class="cs-button-solid">Ver Recuerdos</a>
-			<a href="/contact/" class="cs-button-transparent">
-				<Icon name="play" class="cs-img" />
-				Leer Cartas
-			</a>
+			<a href="/reviews/" class="cs-button-transparent">Leer Cartas</a>
 		</div>
 	</div>
 
 	<!-- Using the preloaded image from the props -->
-	<Picture src={image.src} alt="new home" width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} />
+	<Picture src={image.src} alt="Morelia" width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} />
 </section>
 
 <style lang="less">
@@ -69,7 +60,7 @@ const { image } = Astro.props as Props;
 					width: 100%;
 					height: 100%;
 					background: #000;
-					opacity: 0.7;
+					opacity: 0.4;
 					display: block;
 					position: absolute;
 					top: 0;
@@ -201,11 +192,7 @@ const { image } = Astro.props as Props;
 					}
 				}
 
-				.cs-img {
-					margin-right: (12/16rem);
-					display: block;
 				}
-			}
 		}
 	}
 
@@ -247,16 +234,4 @@ const { image } = Astro.props as Props;
 		}
 	}
 
-	/* Dark Mode */
-	@media only screen and (min-width: 0em) {
-		body.dark-mode {
-			#hero {
-				.cs-background {
-					&:before {
-						opacity: 0.8;
-					}
-				}
-			}
-		}
-	}
 </style>

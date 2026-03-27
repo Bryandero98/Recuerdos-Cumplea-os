@@ -1,8 +1,4 @@
 ---
-/**
- * * Example use case of the CSPicture component if you need to use different images on mobile and desktop, for art direction.
- **/
-
 // Components
 import CSPicture from "@components/CSPicture/CSPicture.astro";
 
@@ -15,12 +11,12 @@ import fallbackImage from "@assets/images/CTA/cabinets2.jpg";
 <section id="cta">
 	<div class="container">
 		<h2 class="title">
-			Get It Done
+			Feliz cumpleaños,
 			<br />
-			With Us Today
+			Morelia
 		</h2>
-		<p>Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add these to the bottom of all pages.</p>
-		<a href="/contact/" class="cs-button-solid">Get an Estimate Now</a>
+		<p>Hoy celebramos todo lo que eres: tu alegría, tu fuerza y el amor que le das a quienes te rodean.</p>
+		<a href="/" class="cs-button-solid">Ver recuerdos</a>
 	</div>
 	<CSPicture mobileImgUrl={mobileImage} desktopImgUrl={desktopImage} fallbackImgUrl={fallbackImage} alt="" />
 </section>

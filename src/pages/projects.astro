@@ -1,20 +1,177 @@
 ---
 // Utils
-import { getImage } from "astro:assets";
+import { getImage, Picture } from "astro:assets";
 
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import Gallery from "@components/Gallery/Gallery.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import landingImage from "@assets/images/landing.jpg";
+import landingImage from "@assets/images/Morelia/Presentacion/banner-interior-01.png";
+
+// Galería — 18 photos (6 per column)
+import foto22 from "@assets/images/Morelia/Galería/foto-22.jpeg";
+import foto23 from "@assets/images/Morelia/Galería/foto-23.jpeg";
+import foto26 from "@assets/images/Morelia/Galería/foto-26.jpeg";
+import foto27 from "@assets/images/Morelia/Galería/foto-27.jpeg";
+import foto28 from "@assets/images/Morelia/Galería/foto-28.jpeg";
+import foto64 from "@assets/images/Morelia/Galería/foto-64.jpeg";
+import foto30 from "@assets/images/Morelia/Galería/foto-30.jpeg";
+import foto31 from "@assets/images/Morelia/Galería/foto-31.jpeg";
+import foto32 from "@assets/images/Morelia/Galería/foto-32.jpeg";
+import foto33 from "@assets/images/Morelia/Galería/foto-33.jpeg";
+import foto39 from "@assets/images/Morelia/Galería/foto-39.jpeg";
+import foto65 from "@assets/images/Morelia/Galería/foto-65.jpeg";
+import foto42 from "@assets/images/Morelia/Galería/foto-42.jpeg";
+import foto43 from "@assets/images/Morelia/Galería/foto-43.jpeg";
+import foto49 from "@assets/images/Morelia/Galería/foto-49.jpeg";
+import foto51 from "@assets/images/Morelia/Galería/foto-51.jpeg";
+import foto66 from "@assets/images/Morelia/Galería/foto-66.jpeg";
+import foto76 from "@assets/images/Morelia/Galería/foto-76.jpeg";
+
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="Projects" description="Meta description for the page" heroImage={optimizedImage}>
-	<Banner title="All projects" image={optimizedImage} />
-	<Gallery />
+<BaseLayout title="Galería" description="Una galería de fotos y recuerdos especiales para celebrar el cumpleaños de Morelia." heroImage={optimizedImage}>
+	<Banner title="Galería de Recuerdos" image={optimizedImage} />
+
+	<section id="galeria-full">
+		<div class="cs-container">
+			<span class="cs-topper">Momentos especiales</span>
+			<h2 class="cs-title">Una galería de recuerdos para Morelia</h2>
+
+			<!-- 18 photos: 3 columns of 6 -->
+			<div class="cs-image-group">
+				<div class="cs-row cs-row-1">
+					<Picture src={foto22} alt="Recuerdo especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto23} alt="Momento de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto26} alt="Un recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto27} alt="Fotografía especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto28} alt="Momento bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto64} alt="Galería de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+				</div>
+				<div class="cs-row cs-row-2">
+					<Picture src={foto30} alt="Recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto31} alt="Momento especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto32} alt="Fotografía de recuerdo" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto33} alt="Un instante para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto39} alt="Foto especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto65} alt="Momento de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+				</div>
+				<div class="cs-row cs-row-3">
+					<Picture src={foto42} alt="Recuerdo bonito de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto43} alt="Momento especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto49} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto51} alt="Recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto66} alt="Recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto76} alt="Un momento especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<CTA />
 </BaseLayout>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#galeria-full {
+			text-align: center;
+			padding: var(--sectionPadding);
+			overflow: hidden;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1322/16em);
+				margin: auto;
+			}
+
+			.cs-topper {
+				text-align: center;
+				margin-bottom: (16/16rem);
+			}
+
+			.cs-title {
+				text-align: center;
+				max-width: (621/16rem);
+				margin-bottom: (40/16rem);
+			}
+
+			.cs-image-group {
+				font-size: ~"min(1.1vw, 1em)";
+				width: 100%;
+				max-width: (1322/16em);
+				margin: 0 auto;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: (30/16em);
+			}
+
+			.cs-row {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				gap: (30/16em);
+			}
+
+			.cs-picture {
+				display: block;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			/* Column 1 heights */
+			.cs-row-1 {
+				.cs-p1 { width: (420/16em); height: (567/16em); }
+				.cs-p2 { width: (420/16em); height: (629/16em); }
+				.cs-p3 { width: (420/16em); height: (512/16em); }
+				.cs-p4 { width: (420/16em); height: (580/16em); }
+				.cs-p5 { width: (420/16em); height: (490/16em); }
+				.cs-p6 { width: (420/16em); height: (610/16em); }
+			}
+
+			/* Column 2 heights */
+			.cs-row-2 {
+				.cs-p1 { width: (420/16em); height: (492/16em); }
+				.cs-p2 { width: (420/16em); height: (517/16em); }
+				.cs-p3 { width: (420/16em); height: (629/16em); }
+				.cs-p4 { width: (420/16em); height: (545/16em); }
+				.cs-p5 { width: (420/16em); height: (480/16em); }
+				.cs-p6 { width: (420/16em); height: (570/16em); }
+			}
+
+			/* Column 3 heights */
+			.cs-row-3 {
+				.cs-p1 { width: (420/16em); height: (625/16em); }
+				.cs-p2 { width: (420/16em); height: (452/16em); }
+				.cs-p3 { width: (420/16em); height: (600/16em); }
+				.cs-p4 { width: (420/16em); height: (530/16em); }
+				.cs-p5 { width: (420/16em); height: (560/16em); }
+				.cs-p6 { width: (420/16em); height: (495/16em); }
+			}
+		}
+	}
+
+	/* Dark mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#galeria-full {
+				.cs-title {
+					color: var(--bodyTextColorWhite);
+				}
+			}
+		}
+	}
+</style>

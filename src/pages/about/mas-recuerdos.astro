@@ -1,0 +1,194 @@
+---
+// Utils
+import { getImage, Picture } from "astro:assets";
+
+// Components
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Banner from "@components/Banner/Banner.astro";
+import CTA from "@components/CTA/CTASimple.astro";
+
+// Images
+import landingImage from "@assets/images/Morelia/Presentacion/banner-interior-02.png";
+
+// Column 1 (11 photos)
+import foto01 from "@assets/images/Morelia/Recuerdos/foto-01.jpeg";
+import foto02 from "@assets/images/Morelia/Recuerdos/foto-02.jpeg";
+import foto03 from "@assets/images/Morelia/Recuerdos/foto-03.jpeg";
+import foto04 from "@assets/images/Morelia/Recuerdos/foto-04.jpeg";
+import foto05 from "@assets/images/Morelia/Recuerdos/foto-05.jpeg";
+import foto06 from "@assets/images/Morelia/Recuerdos/foto-06.jpeg";
+import foto07 from "@assets/images/Morelia/Recuerdos/foto-07.jpeg";
+import foto08 from "@assets/images/Morelia/Recuerdos/foto-08.jpeg";
+import foto09 from "@assets/images/Morelia/Recuerdos/foto-09.jpeg";
+import foto10 from "@assets/images/Morelia/Recuerdos/foto-10.jpeg";
+import foto11 from "@assets/images/Morelia/Recuerdos/foto-11.jpeg";
+
+// Column 2 (10 photos)
+import foto12 from "@assets/images/Morelia/Recuerdos/foto-12.jpeg";
+import foto13 from "@assets/images/Morelia/Recuerdos/foto-13.jpeg";
+import foto21 from "@assets/images/Morelia/Recuerdos/foto-21.jpeg";
+import foto25 from "@assets/images/Morelia/Recuerdos/foto-25.jpeg";
+import foto45 from "@assets/images/Morelia/Recuerdos/foto-45.jpeg";
+import foto46 from "@assets/images/Morelia/Recuerdos/foto-46.jpeg";
+import foto47 from "@assets/images/Morelia/Recuerdos/foto-47.jpeg";
+import foto48 from "@assets/images/Morelia/Recuerdos/foto-48.jpeg";
+import foto50 from "@assets/images/Morelia/Recuerdos/foto-50.jpeg";
+import foto52 from "@assets/images/Morelia/Recuerdos/foto-52.jpeg";
+
+// Column 3 (10 photos)
+import foto53 from "@assets/images/Morelia/Recuerdos/foto-53.jpeg";
+import foto54 from "@assets/images/Morelia/Recuerdos/foto-54.jpeg";
+import foto58 from "@assets/images/Morelia/Recuerdos/foto-58.jpeg";
+import foto59 from "@assets/images/Morelia/Recuerdos/foto-59.jpeg";
+import foto60 from "@assets/images/Morelia/Recuerdos/foto-60.jpeg";
+import foto61 from "@assets/images/Morelia/Recuerdos/foto-61.jpeg";
+import foto62 from "@assets/images/Morelia/Recuerdos/foto-62.jpeg";
+import foto63 from "@assets/images/Morelia/Recuerdos/foto-63.jpeg";
+import foto71 from "@assets/images/Morelia/Recuerdos/foto-71.jpeg";
+import foto72 from "@assets/images/Morelia/Recuerdos/foto-72.jpeg";
+
+const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+---
+
+<BaseLayout title="Todos los Recuerdos" description="Una colección completa de recuerdos y fotos especiales de Morelia." heroImage={optimizedImage}>
+	<Banner title="Todos los Recuerdos" image={optimizedImage} />
+
+	<section id="recuerdos-completos">
+		<div class="cs-container">
+			<span class="cs-topper">Para siempre en el corazón</span>
+			<h2 class="cs-title">Cada momento contigo, guardado aquí</h2>
+
+			<div class="cs-image-group">
+				<!-- Column 1 (11 photos) -->
+				<div class="cs-row cs-row-1">
+					<Picture src={foto01} alt="Recuerdo especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto02} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto03} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto04} alt="Un recuerdo bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto05} alt="Instante especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto06} alt="Momento de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto07} alt="Recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto08} alt="Foto de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto09} alt="Un instante para recordar" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+					<Picture src={foto10} alt="Momento especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p10" }} />
+					<Picture src={foto11} alt="Recuerdo especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p11" }} />
+				</div>
+				<!-- Column 2 (10 photos) -->
+				<div class="cs-row cs-row-2">
+					<Picture src={foto12} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto13} alt="Momento inolvidable" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto21} alt="Recuerdo bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto25} alt="Foto especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto45} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto46} alt="Recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto47} alt="Fotografía especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto48} alt="Un instante bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto50} alt="Recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+					<Picture src={foto52} alt="Momento especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p10" }} />
+				</div>
+				<!-- Column 3 (10 photos) -->
+				<div class="cs-row cs-row-3">
+					<Picture src={foto53} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto54} alt="Recuerdo especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto58} alt="Momento bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto59} alt="Foto de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto60} alt="Un recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto61} alt="Instante especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto62} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto63} alt="Recuerdo bonito de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto71} alt="Fotografía especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+					<Picture src={foto72} alt="Un instante para recordar" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p10" }} />
+				</div>
+			</div>
+
+			<a href="/about/" class="cs-button-solid">Volver a Recuerdos</a>
+		</div>
+	</section>
+
+	<CTA />
+</BaseLayout>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#recuerdos-completos {
+			text-align: center;
+			padding: var(--sectionPadding);
+			overflow: hidden;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1322/16em);
+				margin: auto;
+			}
+
+			.cs-topper {
+				text-align: center;
+				margin-bottom: (16/16rem);
+			}
+
+			.cs-title {
+				text-align: center;
+				max-width: (621/16rem);
+				margin-bottom: (40/16rem);
+			}
+
+			.cs-image-group {
+				font-size: ~"min(1.1vw, 1em)";
+				width: 100%;
+				max-width: (1322/16em);
+				margin: 0 auto (60/16rem);
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: (30/16em);
+			}
+
+			.cs-row {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				gap: (30/16em);
+			}
+
+			.cs-picture {
+				display: block;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			/* Shared heights cycling across all 11 positions */
+			.cs-p1  { width: (420/16em); height: (567/16em); }
+			.cs-p2  { width: (420/16em); height: (492/16em); }
+			.cs-p3  { width: (420/16em); height: (625/16em); }
+			.cs-p4  { width: (420/16em); height: (512/16em); }
+			.cs-p5  { width: (420/16em); height: (580/16em); }
+			.cs-p6  { width: (420/16em); height: (445/16em); }
+			.cs-p7  { width: (420/16em); height: (620/16em); }
+			.cs-p8  { width: (420/16em); height: (500/16em); }
+			.cs-p9  { width: (420/16em); height: (555/16em); }
+			.cs-p10 { width: (420/16em); height: (490/16em); }
+			.cs-p11 { width: (420/16em); height: (640/16em); }
+		}
+	}
+
+	/* Dark mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#recuerdos-completos {
+				.cs-title {
+					color: var(--bodyTextColorWhite);
+				}
+			}
+		}
+	}
+</style>

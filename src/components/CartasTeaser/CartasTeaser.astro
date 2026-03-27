@@ -1,0 +1,180 @@
+---
+// No utils nor props for this component
+---
+
+<section id="cartas-teaser">
+	<div class="cs-container">
+		<span class="cs-topper">Con amor</span>
+		<h2 class="cs-title">Un par de palabras para ti</h2>
+		<p class="cs-text">Algunas personas que te quieren también quisieron dejarte un mensaje.</p>
+
+		<div class="cs-card-grid">
+
+			<article class="cs-carta">
+				<p class="cs-message">Feliz cumpleaños, Morelia. Que Dios te dé muchos años de amor, salud y bendiciones. Un abrazo a la distancia.</p>
+				<footer class="cs-carta-footer">
+					<span class="cs-initial">M</span>
+					<div class="cs-author">
+						<strong class="cs-name">Miguel Iván</strong>
+						<span class="cs-relation">Primo</span>
+					</div>
+				</footer>
+			</article>
+
+			<article class="cs-carta">
+				<p class="cs-message">More hermosa, feliz cumpleaños. Que Dios y la Virgen te bendigan y te regalen una vida larga, llena de salud, amor y cosas hermosas. Espero que cumplas todos tus sueños y metas. Te amo.</p>
+				<footer class="cs-carta-footer">
+					<span class="cs-initial">D</span>
+					<div class="cs-author">
+						<strong class="cs-name">Daniela Amaris</strong>
+						<span class="cs-relation">Prima</span>
+					</div>
+				</footer>
+			</article>
+
+		</div>
+
+		<a href="/reviews/" class="cs-button-solid">Ver todas las cartas</a>
+	</div>
+</section>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#cartas-teaser {
+			text-align: center;
+			padding: var(--sectionPadding);
+
+			.cs-container {
+				width: 100%;
+				max-width: (1104/16rem);
+				margin: auto;
+			}
+
+			.cs-topper {
+				text-align: center;
+				margin-bottom: (16/16rem);
+			}
+
+			.cs-title {
+				text-align: center;
+				max-width: (600/16rem);
+				margin: 0 auto (16/16rem);
+			}
+
+			.cs-text {
+				font-size: clamp(0.9375rem, 1.5vw, 1rem);
+				line-height: 1.7em;
+				text-align: center;
+				max-width: (580/16rem);
+				margin: 0 auto (48/16rem);
+				color: var(--bodyTextColor);
+			}
+
+			.cs-card-grid {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: (30/16rem);
+				margin-bottom: (48/16rem);
+			}
+
+			.cs-carta {
+				width: 100%;
+				max-width: (480/16rem);
+				background: #fff;
+				box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+				border-radius: (8/16rem);
+				padding: (28/16rem);
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				box-sizing: border-box;
+			}
+
+			.cs-message {
+				font-size: (15/16rem);
+				line-height: 1.7em;
+				color: var(--bodyTextColor);
+				margin: 0 0 (24/16rem);
+				flex: 1;
+			}
+
+			.cs-carta-footer {
+				display: flex;
+				align-items: center;
+				gap: (12/16rem);
+				padding-top: (16/16rem);
+				border-top: 1px solid #ede8e3;
+				margin-top: auto;
+			}
+
+			.cs-initial {
+				width: (40/16rem);
+				height: (40/16rem);
+				border-radius: 50%;
+				background: var(--primary);
+				color: #fff;
+				font-weight: 700;
+				font-size: (16/16rem);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+			}
+
+			.cs-author {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.cs-name {
+				font-size: (15/16rem);
+				font-weight: 700;
+				line-height: 1.3em;
+				color: var(--headerColor);
+			}
+
+			.cs-relation {
+				font-size: (13/16rem);
+				color: var(--primary);
+				line-height: 1.4em;
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#cartas-teaser {
+				.cs-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-title {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-carta {
+					background: var(--medium);
+				}
+
+				.cs-message {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-carta-footer {
+					border-top-color: rgba(255, 255, 255, 0.1);
+				}
+
+				.cs-name {
+					color: #fff;
+				}
+
+				.cs-relation {
+					color: var(--primaryLight);
+				}
+			}
+		}
+	}
+</style>

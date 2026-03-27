@@ -1,0 +1,132 @@
+---
+import { Picture } from "astro:assets";
+import postalesAndres from "@assets/images/Morelia/Andres-Alejandro.jpeg";
+import postalesJose from "@assets/images/Morelia/Jose-Jacome.jpeg";
+---
+
+<section id="postales">
+	<div class="cs-container">
+		<span class="cs-topper">Con más cariño</span>
+		<h2 class="cs-title">Postales con cariño</h2>
+		<p class="cs-text">Pequeños mensajes visuales enviados con todo el amor del mundo para ti, More.</p>
+
+		<div class="cs-postales-grid">
+			<figure class="cs-postal">
+				<Picture
+					src={postalesAndres}
+					alt="Postal de cumpleaños de Andrés Alejandro para Morelia"
+					formats={["avif", "webp"]}
+					class="cs-postal-img"
+				/>
+			</figure>
+			<figure class="cs-postal">
+				<Picture
+					src={postalesJose}
+					alt="Postal de cumpleaños de José Jácome para Morelia"
+					formats={["avif", "webp"]}
+					class="cs-postal-img"
+				/>
+			</figure>
+		</div>
+	</div>
+</section>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#postales {
+			padding: var(--sectionPadding);
+			text-align: center;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1104/16rem);
+				margin: auto;
+			}
+
+			.cs-topper {
+				text-align: center;
+				margin-bottom: (16/16rem);
+			}
+
+			.cs-title {
+				text-align: center;
+				max-width: (600/16rem);
+				margin: 0 auto (16/16rem);
+			}
+
+			.cs-text {
+				font-size: clamp(0.9375rem, 1.5vw, 1rem);
+				line-height: 1.7em;
+				text-align: center;
+				max-width: (580/16rem);
+				margin: 0 auto (48/16rem);
+				color: var(--bodyTextColor);
+			}
+
+			.cs-postales-grid {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: (30/16rem);
+			}
+
+			.cs-postal {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				max-width: (520/16rem);
+				border-radius: (12/16rem);
+				overflow: hidden;
+				box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+			}
+
+			.cs-postal-img {
+				display: block;
+				width: 100%;
+				height: auto;
+
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+	}
+
+	/* Desktop - 768px */
+	@media only screen and (min-width: 48rem) {
+		#postales {
+			.cs-postales-grid {
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			.cs-postal {
+				flex: 1;
+				max-width: (520/16rem);
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#postales {
+				.cs-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-title {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-postal {
+					box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+				}
+			}
+		}
+	}
+</style>

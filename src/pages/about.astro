@@ -1,22 +1,141 @@
 ---
 // Utils
-import { getImage } from "astro:assets";
+import { getImage, Picture } from "astro:assets";
 
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import FAQ from "@components/FAQ/FAQ.astro";
 import SideBySide from "@components/SideBySide/SideBySide.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import landingImage from "@assets/images/landing.jpg";
+import landingImage from "@assets/images/Morelia/Presentacion/banner-interior-02.png";
+
+// Preview gallery (6 Recuerdos photos)
+import foto03 from "@assets/images/Morelia/Recuerdos/foto-03.jpeg";
+import foto04 from "@assets/images/Morelia/Recuerdos/foto-04.jpeg";
+import foto05 from "@assets/images/Morelia/Recuerdos/foto-05.jpeg";
+import foto06 from "@assets/images/Morelia/Recuerdos/foto-06.jpeg";
+import foto07 from "@assets/images/Morelia/Recuerdos/foto-07.jpeg";
+import foto08 from "@assets/images/Morelia/Recuerdos/foto-08.jpeg";
+
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="About" description="Meta description for the page" heroImage={optimizedImage}>
-	<Banner title="About Us" image={optimizedImage} />
+<BaseLayout title="Recuerdos" description="Un espacio lleno de recuerdos, fotos y palabras especiales para Morelia." heroImage={optimizedImage}>
+	<Banner title="Nuestros Recuerdos" image={optimizedImage} />
 	<SideBySide />
-	<FAQ />
+
+	<section id="recuerdos-preview">
+		<div class="cs-container">
+			<span class="cs-topper">Una muestra de amor</span>
+			<h2 class="cs-title">Recuerdos que guardamos para ti</h2>
+
+			<div class="cs-image-group">
+				<div class="cs-row cs-row-1">
+					<Picture src={foto03} alt="Recuerdo especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto04} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+				</div>
+				<div class="cs-row cs-row-2">
+					<Picture src={foto05} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto06} alt="Un recuerdo bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+				</div>
+				<div class="cs-row cs-row-3">
+					<Picture src={foto07} alt="Instante especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto08} alt="Recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+				</div>
+			</div>
+
+			<a href="/about/mas-recuerdos/" class="cs-button-solid">Ver todos los recuerdos</a>
+		</div>
+	</section>
+
 	<CTA />
 </BaseLayout>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#recuerdos-preview {
+			text-align: center;
+			padding: var(--sectionPadding);
+			overflow: hidden;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1322/16em);
+				margin: auto;
+			}
+
+			.cs-topper {
+				text-align: center;
+				margin-bottom: (16/16rem);
+			}
+
+			.cs-title {
+				text-align: center;
+				max-width: (621/16rem);
+				margin-bottom: (40/16rem);
+			}
+
+			.cs-image-group {
+				font-size: ~"min(1.1vw, 1em)";
+				width: 100%;
+				max-width: (1322/16em);
+				margin: 0 auto (60/16rem);
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: (30/16em);
+			}
+
+			.cs-row {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				gap: (30/16em);
+			}
+
+			.cs-picture {
+				display: block;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			.cs-row-1 {
+				.cs-p1 { width: (420/16em); height: (567/16em); }
+				.cs-p2 { width: (420/16em); height: (492/16em); }
+			}
+
+			.cs-row-2 {
+				.cs-p1 { width: (420/16em); height: (629/16em); }
+				.cs-p2 { width: (420/16em); height: (512/16em); }
+			}
+
+			.cs-row-3 {
+				.cs-p1 { width: (420/16em); height: (545/16em); }
+				.cs-p2 { width: (420/16em); height: (625/16em); }
+			}
+		}
+	}
+
+	/* Dark mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#recuerdos-preview {
+				.cs-title {
+					color: var(--bodyTextColorWhite);
+				}
+			}
+		}
+	}
+</style>

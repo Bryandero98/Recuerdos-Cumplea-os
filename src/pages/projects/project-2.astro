@@ -8,16 +8,16 @@ import Banner from "@components/Banner/Banner.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import port1 from "@assets/images/projects/port1.jpg";
-import port2 from "@assets/images/projects/port2.jpg";
-import port3 from "@assets/images/projects/port3.jpg";
-import port4 from "@assets/images/projects/port4.jpg";
-import port5 from "@assets/images/projects/port5.jpg";
-import port6 from "@assets/images/projects/port6.jpg";
-import port7 from "@assets/images/projects/port7.jpg";
-import port8 from "@assets/images/projects/port8.jpg";
-import port9 from "@assets/images/projects/port9.jpg";
+import landingImage from "@assets/images/Morelia/Presentacion/banner-interior-01.png";
+import port1 from "@assets/images/Morelia/Momentos/foto-14.jpeg";
+import port2 from "@assets/images/Morelia/Momentos/foto-15.jpeg";
+import port3 from "@assets/images/Morelia/Momentos/foto-16.jpeg";
+import port4 from "@assets/images/Morelia/Momentos/foto-17.jpeg";
+import port5 from "@assets/images/Morelia/Momentos/foto-18.jpeg";
+import port6 from "@assets/images/Morelia/Momentos/foto-19.jpeg";
+import port7 from "@assets/images/Morelia/Momentos/foto-20.jpeg";
+import port8 from "@assets/images/Morelia/Momentos/foto-24.jpeg";
+import port9 from "@assets/images/Morelia/Momentos/foto-29.jpeg";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
@@ -38,23 +38,23 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				<!-- Row 1-->
 				<div class="cs-row cs-row-1">
 					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port1} alt="new hallway" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port4} alt="new home construction" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port7} alt="building a new wall" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
+					<Picture src={port1} alt="Recuerdo especial de Morelia" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
+					<Picture src={port4} alt="Momento especial de Morelia" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
+					<Picture src={port7} alt="Foto de Morelia" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
 				</div>
 				<!-- Row 2 -->
 				<div class="cs-row cs-row-2">
 					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port2} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port5} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port8} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
+					<Picture src={port2} alt="Fotografía de recuerdo" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
+					<Picture src={port5} alt="Momento inolvidable" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
+					<Picture src={port8} alt="Instante especial de Morelia" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
 				</div>
 				<!-- Row 3 -->
 				<div class="cs-row cs-row-3">
 					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port3} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port6} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port9} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
+					<Picture src={port3} alt="Fotografía de recuerdo" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
+					<Picture src={port6} alt="Momento inolvidable" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
+					<Picture src={port9} alt="Instante especial de Morelia" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
 				</div>
 			</div>
 			<a href="/contact/" class="cs-button-solid">Get Free Quote</a>

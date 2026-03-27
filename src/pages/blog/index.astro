@@ -1,34 +1,194 @@
 ---
-/**
- * * This page is the blog index and displays all the articles in a grid
- **/
-
 // Utils
-import { getCollection } from "astro:content";
-import { getImage } from "astro:assets";
-import "@styles/sidebar.less";
+import { Picture, getImage } from "astro:assets";
 
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import BlogRecentArticlesWithSidebar from "@layouts/BlogRecentArticlesWithSidebar.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import placeholderImage from "@assets/images/placeholder.jpg";
-const placeholderOptimizedImage = await getImage({ src: placeholderImage, format: "webp" });
+import bannerImage from "@assets/images/Morelia/Presentacion/banner-interior-02.png";
 
-const posts = await getCollection("blog");
-posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+// Column 1 (9 photos)
+import foto14 from "@assets/images/Morelia/Momentos/foto-14.jpeg";
+import foto15 from "@assets/images/Morelia/Momentos/foto-15.jpeg";
+import foto16 from "@assets/images/Morelia/Momentos/foto-16.jpeg";
+import foto17 from "@assets/images/Morelia/Momentos/foto-17.jpeg";
+import foto18 from "@assets/images/Morelia/Momentos/foto-18.jpeg";
+import foto19 from "@assets/images/Morelia/Momentos/foto-19.jpeg";
+import foto20 from "@assets/images/Morelia/Momentos/foto-20.jpeg";
+import foto24 from "@assets/images/Morelia/Momentos/foto-24.jpeg";
+import foto29 from "@assets/images/Morelia/Momentos/foto-29.jpeg";
+
+// Column 2 (9 photos)
+import foto34 from "@assets/images/Morelia/Momentos/foto-34.jpeg";
+import foto35 from "@assets/images/Morelia/Momentos/foto-35.jpeg";
+import foto36 from "@assets/images/Morelia/Momentos/foto-36.jpeg";
+import foto37 from "@assets/images/Morelia/Momentos/foto-37.jpeg";
+import foto38 from "@assets/images/Morelia/Momentos/foto-38.jpeg";
+import foto40 from "@assets/images/Morelia/Momentos/foto-40.jpeg";
+import foto41 from "@assets/images/Morelia/Momentos/foto-41.jpeg";
+import foto44 from "@assets/images/Morelia/Momentos/foto-44.jpeg";
+import foto55 from "@assets/images/Morelia/Momentos/foto-55.jpeg";
+
+// Column 3 (9 photos)
+import foto56 from "@assets/images/Morelia/Momentos/foto-56.jpeg";
+import foto57 from "@assets/images/Morelia/Momentos/foto-57.jpeg";
+import foto67 from "@assets/images/Morelia/Momentos/foto-67.jpeg";
+import foto68 from "@assets/images/Morelia/Momentos/foto-68.jpeg";
+import foto69 from "@assets/images/Morelia/Momentos/foto-69.jpeg";
+import foto70 from "@assets/images/Morelia/Momentos/foto-70.jpeg";
+import foto73 from "@assets/images/Morelia/Momentos/foto-73.jpeg";
+import foto74 from "@assets/images/Morelia/Momentos/foto-74.jpeg";
+import foto75 from "@assets/images/Morelia/Momentos/foto-75.jpeg";
+
+const optimizedBanner = await getImage({ src: bannerImage, format: "webp" });
 ---
 
-<BaseLayout title="Blog" description="Meta description for the page" heroImage={placeholderOptimizedImage}>
-	<Banner title="Blog" image={placeholderOptimizedImage} />
+<BaseLayout title="Momentos" description="Una colección de momentos especiales de Morelia." heroImage={optimizedBanner}>
+	<Banner title="Momentos" image={optimizedBanner} />
 
-	<!-- Use the BlogRecentArticles layout to display the recent articles in a standard grid -->
-	<!-- <BlogRecentArticles posts={posts} /> -->
+	<section id="momentos">
+		<div class="cs-container">
+			<div class="cs-image-group">
+				<!-- Column 1 -->
+				<div class="cs-row cs-row-1">
+					<Picture src={foto14} alt="Momento especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto15} alt="Recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto16} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto17} alt="Instante especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto18} alt="Momento bonito de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto19} alt="Recuerdo para siempre" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto20} alt="Foto de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto24} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto29} alt="Recuerdo especial" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+				</div>
+				<!-- Column 2 -->
+				<div class="cs-row cs-row-2">
+					<Picture src={foto34} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto35} alt="Momento inolvidable" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto36} alt="Con el corazón lleno" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto37} alt="Momentos que se quedan" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto38} alt="Un momento para recordar" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto40} alt="Recuerdo de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto41} alt="Foto especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto44} alt="Llena de vida y alegría" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto55} alt="Siempre en el recuerdo" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+				</div>
+				<!-- Column 3 -->
+				<div class="cs-row cs-row-3">
+					<Picture src={foto56} alt="Un recuerdo que perdura" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p1" }} />
+					<Picture src={foto57} alt="Feliz cumpleaños, Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p2" }} />
+					<Picture src={foto67} alt="Momento especial de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p3" }} />
+					<Picture src={foto68} alt="Recuerdo bonito" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p4" }} />
+					<Picture src={foto69} alt="Fotografía de Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p5" }} />
+					<Picture src={foto70} alt="Instante para recordar" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p6" }} />
+					<Picture src={foto73} alt="Momento con Morelia" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p7" }} />
+					<Picture src={foto74} alt="Recuerdo de su cumpleaños" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p8" }} />
+					<Picture src={foto75} alt="Un año más de momentos" width={400} height={560} formats={["avif","webp"]} pictureAttributes={{ class: "cs-picture cs-p9" }} />
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<!-- Use the BlogRecentArticlesWithSidebar layout to display the recent articles in a custom sidebar layout-->
-	<BlogRecentArticlesWithSidebar posts={posts} />
 	<CTA />
 </BaseLayout>
+
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0em) {
+		#momentos {
+			text-align: center;
+			padding: var(--sectionPadding);
+			overflow: hidden;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1322/16em);
+				margin: auto;
+			}
+
+			.cs-image-group {
+				font-size: ~"min(1.1vw, 1em)";
+				width: 100%;
+				max-width: (1322/16em);
+				margin: 0 auto;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: (30/16em);
+			}
+
+			.cs-row {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				gap: (30/16em);
+			}
+
+			.cs-picture {
+				display: block;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			/* Column 1 */
+			.cs-row-1 {
+				.cs-p1 { width: (420/16em); height: (567/16em); }
+				.cs-p2 { width: (420/16em); height: (492/16em); }
+				.cs-p3 { width: (420/16em); height: (625/16em); }
+				.cs-p4 { width: (420/16em); height: (512/16em); }
+				.cs-p5 { width: (420/16em); height: (580/16em); }
+				.cs-p6 { width: (420/16em); height: (445/16em); }
+				.cs-p7 { width: (420/16em); height: (620/16em); }
+				.cs-p8 { width: (420/16em); height: (500/16em); }
+				.cs-p9 { width: (420/16em); height: (555/16em); }
+			}
+
+			/* Column 2 */
+			.cs-row-2 {
+				.cs-p1 { width: (420/16em); height: (629/16em); }
+				.cs-p2 { width: (420/16em); height: (517/16em); }
+				.cs-p3 { width: (420/16em); height: (452/16em); }
+				.cs-p4 { width: (420/16em); height: (590/16em); }
+				.cs-p5 { width: (420/16em); height: (470/16em); }
+				.cs-p6 { width: (420/16em); height: (630/16em); }
+				.cs-p7 { width: (420/16em); height: (520/16em); }
+				.cs-p8 { width: (420/16em); height: (460/16em); }
+				.cs-p9 { width: (420/16em); height: (610/16em); }
+			}
+
+			/* Column 3 */
+			.cs-row-3 {
+				.cs-p1 { width: (420/16em); height: (512/16em); }
+				.cs-p2 { width: (420/16em); height: (629/16em); }
+				.cs-p3 { width: (420/16em); height: (492/16em); }
+				.cs-p4 { width: (420/16em); height: (560/16em); }
+				.cs-p5 { width: (420/16em); height: (430/16em); }
+				.cs-p6 { width: (420/16em); height: (600/16em); }
+				.cs-p7 { width: (420/16em); height: (480/16em); }
+				.cs-p8 { width: (420/16em); height: (640/16em); }
+				.cs-p9 { width: (420/16em); height: (510/16em); }
+			}
+		}
+	}
+
+	/* Dark mode */
+	@media only screen and (min-width: 0em) {
+		body.dark-mode {
+			#momentos {
+				background: transparent;
+			}
+		}
+	}
+</style>

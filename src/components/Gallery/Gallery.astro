@@ -1,50 +1,47 @@
 ---
-// Gallery component from index.astro
-
 // Utils
 import { Picture } from "astro:assets";
 
 // Images
-import port1 from "@assets/images/projects/port1.jpg";
-import port2 from "@assets/images/projects/port2.jpg";
-import port3 from "@assets/images/projects/port3.jpg";
-import port4 from "@assets/images/projects/port4.jpg";
-import port5 from "@assets/images/projects/port5.jpg";
-import port6 from "@assets/images/projects/port6.jpg";
-import port7 from "@assets/images/projects/port7.jpg";
-import port8 from "@assets/images/projects/port8.jpg";
-import port9 from "@assets/images/projects/port9.jpg";
+import foto22 from "@assets/images/Morelia/Galería/foto-22.jpeg";
+import foto26 from "@assets/images/Morelia/Galería/foto-26.jpeg";
+import foto36 from "@assets/images/Morelia/Momentos/foto-36.jpeg";
+import foto23 from "@assets/images/Morelia/Galería/foto-23.jpeg";
+import foto35 from "@assets/images/Morelia/Momentos/foto-35.jpeg";
+import foto27 from "@assets/images/Morelia/Galería/foto-27.jpeg";
+import foto34 from "@assets/images/Morelia/Momentos/foto-34.jpeg";
+import foto28 from "@assets/images/Morelia/Galería/foto-28.jpeg";
+import foto37 from "@assets/images/Morelia/Momentos/foto-37.jpeg";
 ---
 
 <section id="gallery">
   <div class="cs-container">
-    <span class="cs-topper">Our Portfolio</span>
+    <span class="cs-topper">Momentos especiales</span>
     <h2 class="cs-title">
-      Et orci volutpat, back up generator installations
+      Una galería de recuerdos para Morelia
     </h2>
     <div class="cs-image-group">
       <!-- Row 1-->
       <div class="cs-row cs-row-1">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
         <Picture
-          src={port1}
-          alt="new hallway"
+          src={foto22}
+          alt="Recuerdo especial de Morelia"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture1" }}
         />
         <Picture
-          src={port4}
-          alt="new home construction"
+          src={foto23}
+          alt="Momento especial de Morelia"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture2" }}
         />
         <Picture
-          src={port7}
-          alt="building a new wall"
+          src={foto34}
+          alt="Un recuerdo para siempre"
           width={400}
           height={560}
           formats={['avif', 'webp']}
@@ -53,26 +50,25 @@ import port9 from "@assets/images/projects/port9.jpg";
       </div>
       <!-- Row 2 -->
       <div class="cs-row cs-row-2">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
         <Picture
-          src={port2}
-          alt="new kitchen"
+          src={foto26}
+          alt="Fotografía de recuerdo"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture1" }}
         />
         <Picture
-          src={port5}
-          alt="apartment addition"
+          src={foto35}
+          alt="Momento inolvidable de Morelia"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture2" }}
         />
         <Picture
-          src={port8}
-          alt="new kitchen cabinets"
+          src={foto27}
+          alt="Recuerdo con cariño"
           width={400}
           height={560}
           formats={['avif', 'webp']}
@@ -81,26 +77,25 @@ import port9 from "@assets/images/projects/port9.jpg";
       </div>
       <!-- Row 3 -->
       <div class="cs-row cs-row-3">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
         <Picture
-          src={port3}
-          alt="new kitchen"
+          src={foto36}
+          alt="Memoria especial de Morelia"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture1" }}
         />
         <Picture
-          src={port6}
-          alt="apartment addition"
+          src={foto28}
+          alt="Instante para recordar"
           width={400}
           height={560}
           formats={['avif', 'webp']}
           pictureAttributes={{ class: "cs-picture cs-picture2" }}
         />
         <Picture
-          src={port9}
-          alt="new kitchen cabinets"
+          src={foto37}
+          alt="Foto del cumpleaños de Morelia"
           width={400}
           height={560}
           formats={['avif', 'webp']}
@@ -108,7 +103,6 @@ import port9 from "@assets/images/projects/port9.jpg";
         />
       </div>
     </div>
-    <a href="/projects/" class="cs-button-solid">View all projects</a>
   </div>
 </section>
 

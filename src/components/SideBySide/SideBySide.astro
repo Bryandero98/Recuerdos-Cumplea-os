@@ -6,36 +6,34 @@ import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 
 // Images
-import cabinets2 from "@assets/images/services/cabinets2.jpg";
-import construction from "@assets/images/services/construction.jpg";
+import recuerdos1 from "@assets/images/Morelia/Recuerdos/foto-01.jpeg";
+import recuerdos2 from "@assets/images/Morelia/Recuerdos/foto-02.jpeg";
 ---
 
 <section id="sbs">
 	<div class="cs-container">
 		<!-- Left Image Section -->
 		<div class="cs-left">
-			<Picture src={cabinets2} alt="cabinets" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
-			<Picture src={construction} alt="house" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
+			<Picture src={recuerdos1} alt="Un recuerdo especial de Morelia" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
+			<Picture src={recuerdos2} alt="Momento especial compartido con Morelia" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
 		</div>
 		<!-- Right Content Section-->
 		<div class="cs-right">
-			<span class="cs-topper">About Us</span>
-			<h2 class="cs-title">About Company Title</h2>
+			<span class="cs-topper">Con mucho cariño</span>
+			<h2 class="cs-title">Momentos que guardaremos para siempre</h2>
 			<p class="cs-text">
-				In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti
-				sociosqu ad litora torquent per.
+				Este espacio nació con una sola intención: reunir en un solo lugar los recuerdos más bonitos que compartimos contigo. Fotos, palabras y momentos que reflejan todo lo que eres para nosotros.
 			</p>
 			<p class="cs-text">
-				In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti
-				sociosqu ad litora torquent per.
+				Hoy, en tu cumpleaños, queremos que sepas lo especial que eres. Cada detalle de este sitio fue pensado con amor, para que puedas volver aquí cuando quieras y recordar que siempre hay personas que te quieren profundamente.
 			</p>
 			<div class="cs-flex-group">
-				<p class="cs-flex-p">In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.</p>
-				<span class="cs-name">Justin Time</span>
-				<span class="cs-job">CEO-Founder</span>
+				<p class="cs-flex-p">Que este día sea tan bonito como tú. Gracias por existir y por llenarnos de alegría con tu presencia.</p>
+				<span class="cs-name">Para ti, Morelia</span>
+				<span class="cs-job">En tu cumpleaños</span>
 				<Icon name="quote-white" class="cs-quote-icon" />
 			</div>
-			<a href="/about/" class="cs-button-solid">More About Us</a>
+			<a href="/projects/" class="cs-button-solid">Ver la Galería</a>
 		</div>
 	</div>
 </section>

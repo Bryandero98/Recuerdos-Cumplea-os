@@ -1,16 +1,4 @@
 ---
-/**
- * DYNAMIC HEADER COMPONENT
- * ========================
- *
- * This header uses data-driven navigation from src/data/navData.json.
- *
- * Features:
- * - Automatically generates nav items from navData.json
- * - Helper functions from utils.js for cleaner code (isCurrentPage, getDropdownId)
- *
- */
-
 // Utils
 import { Icon } from "astro-icon/components";
 import { isCurrentPage, getDropdownId } from "@js/utils.js";
@@ -29,9 +17,9 @@ import navData from "@data/navData.json";
 			<span class="cs-logo-text">Recuerdos Para Morelia</span>
 		</a>
 		<!--Navigation List-->
-		<nav class="cs-nav" aria-label="main navigation">
+		<nav class="cs-nav" aria-label="navegación principal">
 			<!--Mobile Nav Toggle-->
-			<button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-haspopup="menu" aria-label="mobile menu toggle">
+			<button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-haspopup="menu" aria-label="abrir menú de navegación">
 				<span class="cs-box" aria-hidden="true">
 					<span class="cs-line cs-line1" aria-hidden="true"></span>
 					<span class="cs-line cs-line2" aria-hidden="true"></span>

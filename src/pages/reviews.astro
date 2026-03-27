@@ -6,15 +6,19 @@ import { getImage } from "astro:assets";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
 import ReviewsSection from "@components/Reviews/Reviews.astro";
+import Postales from "@components/Postales/Postales.astro";
+import VideoSaludo from "@components/VideoSaludo/VideoSaludo.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import landingImage from "@assets/images/landing.jpg";
+import landingImage from "@assets/images/Morelia/Presentacion/banner-interior-02.png";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="Reviews" description="Meta description for the page" heroImage={optimizedImage}>
-	<Banner title="Reviews" image={optimizedImage} />
+<BaseLayout title="Cartas" description="Palabras y mensajes escritos con amor para celebrar el cumpleaños de Morelia." heroImage={optimizedImage}>
+	<Banner title="Cartas para Morelia" image={optimizedImage} />
 	<ReviewsSection />
+	<Postales />
+	<VideoSaludo />
 	<CTA />
 </BaseLayout>
